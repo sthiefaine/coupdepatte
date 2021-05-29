@@ -1,16 +1,14 @@
 @use 'src/styles/vars';
 
 .section {
-
-  
-  &__title{
+  &__title {
     text-align: center;
     padding-bottom: vars.$gutter;
     margin: vars.$gutter auto;
     border-bottom: 1px solid black;
     width: 95%;
 
-    &__asso{
+    &__asso {
       text-align: center;
       padding-bottom: vars.$gutter;
       margin: vars.$gutter * 4 auto vars.$gutter;
@@ -21,11 +19,9 @@
 }
 
 .grid {
-
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
-  
+  align-items: center;
 }
