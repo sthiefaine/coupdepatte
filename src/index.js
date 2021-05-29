@@ -9,6 +9,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 // == Import : redux - store
 import { Provider } from "react-redux";
 import "./styles/reset.css";
+import "./styles/index.css";
 import App from "./containers/App";
 
 import store from "src/redux/store";
