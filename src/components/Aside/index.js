@@ -7,6 +7,7 @@ import pictureURL from "src/services/pictures";
 
 // == Import
 import "./styles.scss";
+import emptyAvatar from "../../assets/img-avatar.png";
 // == Composant
 const Aside = ({
   handleTogglerClick,
@@ -49,9 +50,7 @@ const Aside = ({
   const asideClasse = asideIsOpen === true ? "aside__open" : "aside__close";
 
   const userAvatar =
-    isLogged === true
-      ? `${pictureURL}${session.avatar}`
-      : "https://res.cloudinary.com/douy56nkf/image/upload/v1594060920/defaults/txxeacnh3vanuhsemfc8.png";
+    isLogged === true ? `${pictureURL}${session.avatar}` : `${emptyAvatar}`;
 
   return (
     <>
