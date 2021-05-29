@@ -13,7 +13,15 @@ import Loader from "src/components/Loader";
 import { sortUsersByRoles } from "src/selectors/user";
 
 // == Composant
-const Section = ({ animalsList, usersList, target }) => {
+const Section = ({
+  animalsList,
+  usersList,
+  target,
+  isLoadingAnimals,
+  isLoadingUsers,
+  isErrorAnimals,
+  isErrorUsers,
+}) => {
   console.log({ animalsList });
   let TypeOfCards;
   if (target !== "animals") {
@@ -35,8 +43,12 @@ const Section = ({ animalsList, usersList, target }) => {
   return (
     <section className="section">
       <div className="grid">
-        {target === "animals" && animalsList.length === 0 && <Loader />}
-        {target !== "animals" && usersList.length === 0 && <Loader />}
+        {target === "animals" && (!isLoadingAnimals || isErrorAnimals) && (
+          <Loader />
+        )}
+        {target !== "animals" && (!isLoadingUsers || isErrorUsers) && (
+          <Loader />
+        )}
         {TypeOfCards}
       </div>
     </section>

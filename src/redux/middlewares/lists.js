@@ -4,6 +4,8 @@ import {
   saveAnimalsList,
   GET_USERS_LIST,
   saveUsersList,
+  getUsersListError,
+  getAnimalsListError,
 } from "src/redux/actions/lists";
 
 const lists = (store) => (next) => (action) => {
@@ -20,8 +22,8 @@ const lists = (store) => (next) => (action) => {
           /* const actionToDispatch = setError();
           store.dispatch(actionToDispatch); */
           console.log("Une erreur est survenue", error);
+          store.dispatch(getUsersListError());
         });
-      next(action);
       break;
     }
     case GET_ANIMALS_LIST:
@@ -35,8 +37,8 @@ const lists = (store) => (next) => (action) => {
           /* const actionToDispatch = setError();
           store.dispatch(actionToDispatch); */
           console.log("Une erreur est survenue", error);
+          store.dispatch(getAnimalsListError());
         });
-      next(action);
       break;
 
     default:
