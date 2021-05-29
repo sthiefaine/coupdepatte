@@ -3,6 +3,8 @@ import {
   SAVE_USERS_LIST,
   GET_USERS_LIST,
   GET_ANIMALS_LIST,
+  GET_USERS_LIST_ERROR,
+  GET_ANIMALS_LIST_ERROR,
 } from "src/redux/actions/lists";
 
 export const initialState = {
@@ -10,6 +12,8 @@ export const initialState = {
   usersList: [],
   isLoadingUsers: false,
   isLoadingAnimals: false,
+  isErrorUsers: false,
+  isErrorAnimals: false,
 };
 
 const lists = (state = initialState, action = {}) => {
@@ -18,12 +22,29 @@ const lists = (state = initialState, action = {}) => {
       return {
         ...state,
         isLoadingUsers: !state.isLoadingUsers,
+        isErrorUsers: false,
+      };
+
+    case GET_USERS_LIST_ERROR:
+      return {
+        ...state,
+        isLoadingUsers: false,
+        isErrorUsers: true,
       };
     case GET_ANIMALS_LIST:
       return {
         ...state,
-        isLoadingAnimals: !state.isLoadingAnimals,
+        isLoadingAnimals: false,
+        isErrorUsers: false,
       };
+
+    case GET_ANIMALS_LIST_ERROR:
+      return {
+        ...state,
+        isLoadingAnimals: false,
+        isErrorAnimals: true,
+      };
+
     case SAVE_ANIMALS_LIST:
       return {
         ...state,

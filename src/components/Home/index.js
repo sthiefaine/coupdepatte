@@ -15,7 +15,14 @@ import { Link } from "react-router-dom";
 import UsersHomePage from "src/containers/Cards/CardsAssoHomePage";
 
 // == Composant
-const Home = ({ animalsList, usersList }) => {
+const Home = ({
+  animalsList,
+  usersList,
+  isErrorUsers,
+  isErrorAnimals,
+  isLoadingAnimals,
+  isLoadingUsers,
+}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -80,8 +87,8 @@ const Home = ({ animalsList, usersList }) => {
         <h2 className="home__title">Les chats en détresse</h2>
 
         <div className="grid">
-          {usersList.length === 0 && <Loader />}
-          {usersList.length > 0 && CardsAnimalsPrev}
+          {(isLoadingAnimals || isErrorAnimals) && <Loader />}
+          {(!isLoadingAnimals || isErrorAnimals) && CardsAnimalsPrev}
         </div>
 
         <Link to="/lists/animals" className="showmore__link">
@@ -95,8 +102,8 @@ const Home = ({ animalsList, usersList }) => {
         <h2 className="home__title">Les associations qui ont besoin de vous</h2>
 
         <div className="grid">
-          {animalsList.length === 0 && <Loader />}
-          {animalsList.length > 0 && CardsUsersPrev}
+          {(isLoadingUsers || isErrorUsers) && <Loader />}
+          {(!isLoadingUsers || isErrorUsers) && CardsUsersPrev}
         </div>
 
         <Link to="/lists/associations" className="showmore__link">
