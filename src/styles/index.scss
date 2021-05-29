@@ -1,0 +1,24 @@
+@use 'vars';
+@use 'variables';
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+
+  margin: 0 auto;
+  min-width: 320px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+#root {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+}

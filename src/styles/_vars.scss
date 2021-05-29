@@ -1,0 +1,30 @@
+@use 'sass:color';
+
+$primary-color: #F96800;
+$primary-color-light: #FF7D20;
+$primary-color-light-2: #ff9d57;
+$primary-color-dark: #9e4200;
+
+$primary-color-dark-lighten: color.scale($primary-color-dark, $lightness: -15%);
+
+$primary-box-shadow: -3px -3px 7px #ffffff73,
+2px 4px 8px rgba(94, 104, 121, 0.3);
+$primary-box-shadow-orange: -3px -3px 7px #ffffff73,
+2px 4px 8px #ff9d57;
+
+$primary-box-shadow-pink: -3px -3px 7px #ffffff73,
+2px 4px 8px #FFF4E9;
+
+$text-color: black;
+
+$background: white;
+
+$gutter: 1rem;
+$radius: 8px;
+
+$font-weight-title: 900;
+$font-weight-text: 400;
+
+
+$asside-size-mobile: 80vw;
+$asside-size-desktop: 20vw;

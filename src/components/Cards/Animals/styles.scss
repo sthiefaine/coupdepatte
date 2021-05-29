@@ -1,0 +1,221 @@
+@use 'src/styles/vars';
+
+
+.card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      margin: 0.5rem 0.5rem;
+
+      //width: 40%;
+      width: 12rem;
+
+      box-shadow: vars.$primary-box-shadow;
+      border-radius: (vars.$radius * 2) (vars.$radius * 2);
+      // margin: vars.$gutter / 2 vars.$gutter / 6;
+      
+
+      @media only screen and (min-width: 500px) {
+
+      }
+
+      @media only screen and (min-width: 750px) {
+
+      }
+
+      @media only screen and (min-width: 1000px) {
+
+
+      }
+
+      @media only screen and (min-width: 1300px) {
+
+
+      }
+
+    
+    &__top {
+
+      min-width: 100%;
+      background-color: white;
+      z-index: 45;
+      border-radius: (vars.$radius * 2) ;
+
+      &__picture {
+    
+        display: block;
+        width: 100%;
+        background-color: white;
+        margin: 0 auto;
+        position: relative;
+        border-radius: (vars.$radius * 2);
+        height: 12rem;
+        z-index: 20;
+    
+      }
+
+    }
+    
+      &__bottom {
+        width: 100%;
+        padding-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    
+        border-radius: (vars.$radius / 2) (vars.$radius / 2);
+  
+        z-index: 1;
+        &__zipCode {
+
+          width: 100%;
+          text-align: center;
+     
+          &__numero {
+
+          }
+        }
+
+         &__option {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
+    
+          &__like {
+            width: 25%;
+            text-align: center;
+          }
+    
+          &__share {
+            width: 25%;
+            text-align: center;
+          }
+    
+         }
+    
+      }
+
+    
+    
+    
+      &__informations {
+        background: vars.$background;
+        box-shadow: none;
+        border-radius: 0 0 (vars.$radius * 2) (vars.$radius * 2);
+
+        
+        // padding: 2rem 1rem 7rem;
+        padding-top: 2rem;
+        margin: 0 0.5rem;
+        z-index: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        position: relative;
+        bottom: 1rem;
+
+        @media only screen and (min-width: 500px) {
+      
+        }
+
+        @media only screen and (min-width: 750px) {
+    
+        }
+
+        @media only screen and (min-width: 1000px) {
+      
+        }
+
+        @media only screen and (min-width: 1300px) {
+        
+        }
+
+        &__name{
+          display: block;
+          margin: 0.2rem 0 0;
+          
+          text-align: left;
+          font-weight: bold;
+        }
+  
+    
+        &__complement{
+          display: block;
+          width: 100%;
+        }
+      }
+
+    &__btn{
+      display: block;
+      margin: vars.$gutter auto;
+      padding: vars.$gutter / 2; 
+      font-size: vars.$gutter;
+      width: 100%;
+      text-align: center;
+      background: -webkit-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+      background: -moz-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+      background: -ms-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+      background: -o-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+      background: linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+      border-radius: vars.$radius / 2;
+      box-shadow: vars.$primary-box-shadow;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+      border: none;
+      transition: 0.2s;
+      color: white;
+  
+      &:hover{
+        color: black;
+        background: linear-gradient( vars.$primary-color-light, vars.$primary-color-dark);
+      }
+  
+      &:active{
+        color: black;
+        background: linear-gradient( vars.$primary-color-light-2, vars.$primary-color-dark-lighten);
+        box-shadow: 1px 1px 5px grey inset;        
+      }
+    }
+}
+
+.card__informations_complement__age, .card__informations_complement__zipCode{
+  width: 100%;
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.card__informations__access {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: vars.$gutter / 2 vars.$gutter;
+  align-self: center;
+
+  &__btn {
+    background-color: #FFC46E;
+    color: white;
+    border-radius: vars.$radius * 2;
+    padding: vars.$gutter / 5 vars.$gutter;
+    border: none;
+    transition: 0.2s;
+
+
+    &:hover{
+      background-color: #33200D;
+    }
+  }
+
+  &__fave {
+    align-self: center;
+    display: flex;
+  }
+
+  &__share {
+    align-self: center;
+    display: flex;
+  }
+}

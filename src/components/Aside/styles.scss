@@ -1,0 +1,155 @@
+@use 'src/styles/vars';
+
+.aside {
+
+  position: fixed;
+  z-index: 2500;
+  $width: calc(15rem);
+  width: $width;
+
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-height: 100vh;
+
+  border: none;
+
+  background: #FFC46E;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  transition: transform .8s;
+
+  &__open {
+    transform: translateX(0);
+    border: none;
+  }
+
+  &__close {
+
+    left: -70%;
+    transform: translateX(-70%);
+    border: none;
+
+    @media only screen and (min-width: 950px) {
+      left: none;
+      transition: none;
+
+
+    }
+  }
+
+  &__link {
+
+    &--active {
+      color: white;
+    }
+  }
+
+
+  &__top {
+
+    &__user {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &__avatar {
+          margin: 1rem;
+          margin-bottom: 0.5rem;
+          height: 4rem;
+          width: 4rem;
+          border-radius: 50%;
+        }
+
+        &__title {
+
+          text-align: center;
+        }
+      }
+
+
+      &__element {
+
+        display: flex;
+
+
+        &__button {
+          padding: 1rem;
+          width: 100%;
+
+          background-color: rgba(255, 255, 255, 0.884);
+          box-shadow: vars.$primary-box-shadow;
+          width: 6rem;
+          color: black;
+          border-radius: vars.$radius * 2;
+          padding: vars.$gutter;
+          border: none;
+          transition: 0.2s;
+          text-align: center;
+          margin: vars.$gutter / 2;
+
+          &:hover {
+            color: #FFC46E;
+          }
+        }
+      }
+    }
+  }
+
+  &__mid {
+    display: block;
+    width: 100%;
+    height: 80vh;
+
+    &__list {
+      display: block;
+      margin: vars.$gutter vars.$gutter 0;
+
+      font-size: 1.2rem;
+
+      // border-top: 2px solid #FFC46E;
+
+      &__h2 {
+        margin-top: vars.$gutter * 2;
+      }
+
+      &__element {
+        display: block;
+
+        margin-left: 1rem;
+        margin-top: 1rem;
+        transition: 0.2s;
+
+        &:hover {
+          color: white;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    margin-bottom: vars.$gutter / 2;
+  }
+}
+
+.deconnexion {
+  width: 7rem;
+}
+
+.sectionTitle {
+  border-top: 2px solid #FFF4E9;
+  border-bottom: 2px solid #FFF4E9;
+  padding: 0.5rem 0;
+}

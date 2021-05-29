@@ -1,0 +1,116 @@
+@use 'src/styles/vars';
+
+.header {
+
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  top: 0;
+
+  width: 100%;
+
+  background-color: white;
+
+  padding: 0rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: vars.$primary-box-shadow;
+
+  //margin-bottom: 10rem;
+
+  &__logo {
+    margin: vars.$gutter;
+    display: block;
+    width: vars.$gutter * 2;
+    filter: brightness(0) invert(1);
+  }
+
+  &__button {
+    background-color: white;
+    border: none;
+    
+    display: flex;
+    align-items: center; 
+
+    &__title {
+      font-size: 1.5rem;
+      color: #FFC46E;
+      font-weight: bold;
+      margin: 0.4rem;
+    }
+
+  }
+
+
+
+  &__middle {
+    display: flex;
+   align-items: center; 
+  }
+
+  &__menu {
+
+    margin: vars.$gutter;
+
+    background-color: white;
+    
+    border-radius: 10px;
+    border: none;
+    
+
+  }
+
+  &__right {
+    display: flex;
+    margin-right: 0.5rem;
+    
+  }
+}
+
+//! Ecran Desktop
+@media screen and (min-width: 640px) {
+  // Arnaque au code => Si quelqu'un à une meilleure solution pour pas que ca prenne les liens du footer 
+  .header{
+
+    &__right{
+
+      &__link{
+
+        color: #FFC46E;
+        font-weight: bold;
+        padding-right: 1em;
+        transition: 0.2s;
+
+        &:hover{
+          color: #33200D;
+        }
+      }
+    }
+  }
+
+
+
+  .header__middle {
+    margin-left: 9em;
+  }
+
+}
+
+//! Ecran téléphone
+@media screen  and (max-width: 640px) {
+
+  .header__right {
+    display: none;
+  }
+
+  .header__middle {
+    margin-left: 1em;
+    
+  }
+}
+
+

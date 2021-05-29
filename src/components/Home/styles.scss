@@ -1,0 +1,226 @@
+@use 'src/styles/vars';
+
+
+.home__title {
+  margin: 2rem auto;
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #33200D;
+  border-bottom: solid 4px #FFC46E;
+  
+}
+
+.showmore__link {
+
+  color: black;
+
+  &__button{
+    display: block;
+    margin: 1rem auto 0;
+    width: 50%;
+    height: 1.75rem;
+    
+  
+    color: #33200D;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    transition: 0.2s;
+
+    &::after{
+      content: '';
+      display: block;
+      margin: 0 auto ;
+      width: 7rem;
+      padding-bottom: vars.$gutter / 4;
+      height: 2px;
+      border-bottom: 2px solid #33200D;
+      transition: width .3s;
+        
+    }
+    &:hover::after{
+      width: 50%;   
+      border-bottom: 2px solid #FFC46E;     
+    }
+  }
+
+  &:hover &__button{
+    color:#FFC46E;
+  }
+
+}
+
+//! Ecran téléphone
+@media screen  and (max-width: 640px) {
+
+// Présentation 
+  .resume__section {
+  
+  color: #33200D;
+  
+  
+}
+.resume__presentation {
+  font-weight: bold;
+  text-align: left;
+}
+
+.resume__text {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  
+}
+
+.resume__photo {
+ text-align: center;
+}
+
+.photopatte {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.resume__flex {
+  justify-content: center;
+}
+
+// Les chats en detresse
+.first__section {
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+  margin: 1.5em;
+  background-color: #FFF4E9 ;
+  box-shadow: vars.$primary-box-shadow;
+}
+
+// Les Associations
+.second__section {
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+  margin: 1.5em;
+  box-shadow: vars.$primary-box-shadow;
+  
+}
+}
+
+//! Ecran tablette
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+
+  // Présentation 
+  .resume__section {
+  
+    color: #33200D;
+    padding-bottom: 1em;
+    margin: 2em;
+    
+  }
+  .resume__presentation {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .resume__text {
+    padding-left: 10%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+  }
+  
+  .resume__photo {
+   text-align: center;
+   padding-right: 10%;
+  }
+  
+  .photopatte {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .resume__flex {
+    
+    display:flex;
+    justify-content: center;
+  
+  }
+
+  // Les chats en detresse
+  .first__section {
+    padding-top: 0.25em;
+    padding-bottom: 1em;
+    margin: 2em;
+    background-color: #FFF4E9 ;
+    box-shadow: vars.$primary-box-shadow;
+}
+
+  // Les Associations
+  .second__section {
+    padding-top: 0.25em;
+    padding-bottom: 1em;
+    margin: 2em;
+    box-shadow: vars.$primary-box-shadow;
+    
+}
+}
+
+//! Ecran Desktop
+@media screen and (min-width: 1024px) {
+
+// Présentation 
+.resume__section {
+  
+  color: #33200D;
+  padding-bottom: 1em;
+  margin: 2em;
+  
+}
+.resume__presentation {
+  font-weight: bold;
+  text-align: left;
+}
+
+.resume__text {
+  padding-left: 10%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.resume__photo {
+ text-align: center;
+ padding-right: 10%;
+}
+
+.photopatte {
+  max-width: 80%;
+  height: auto;
+  max-height: 80vh;
+  margin: 0 auto;
+}
+
+.resume__flex {
+  
+  display:flex;
+  justify-content: center;
+
+}
+// Les chats en detresse
+.first__section {
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+  margin: 2em;
+  background-color: #FFF4E9 ;
+  box-shadow: vars.$primary-box-shadow;
+}
+
+// Les Associations
+.second__section {
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+  margin: 2em;
+  box-shadow: vars.$primary-box-shadow;
+  
+}
+}

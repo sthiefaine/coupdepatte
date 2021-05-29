@@ -1,0 +1,492 @@
+@use 'src/styles/vars';
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.t30 {
+
+  width: 30%;
+}
+
+.profil {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #FFF4E9;
+  margin: vars.$gutter * 2 vars.$gutter vars.$gutter;
+  border-radius: 20px;
+  box-shadow: vars.$primary-box-shadow;
+
+
+
+  &__left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width: 1000px) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width: 1300px) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+
+    @media screen and (max-width: 995px) {
+      height: 190px;
+      margin-bottom: 2rem;
+      width: 200px;
+    }
+
+    &--add {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3.3rem;
+      font-size: 3rem;
+      font-weight: bold;
+      background-color: #ffc46e;
+      border-top-right-radius: 30%;
+      border-bottom-left-radius: 50%;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    &--add:hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3.3rem;
+      font-size: 3rem;
+      font-weight: bold;
+      background-color: #33200D;
+      border-top-right-radius: 30%;
+      border-bottom-left-radius: 50%;
+      text-align: center;
+      color: white;
+    }
+  }
+
+
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // height: 400px;
+
+    @media only screen and (min-width: 1000px) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      // height: 400px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      // height: 400px;
+    }
+
+    /* 
+  * Sub-block infos
+  * Name, sexe, birthdate, mail, bio
+  */
+
+    &__informations {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: vars.$gutter 0;
+
+      &__top {
+        width: 100%;
+        display: flex;
+        padding-top: vars.$gutter / 2;
+      }
+
+      &__nameAndLocationSection {
+        width: 100%;
+      }
+
+      &__name {
+        width: 50%;
+        color: black;
+        font-weight: bold;
+        font-size: 2rem;
+        padding-left: vars.$gutter;
+        margin-bottom: vars.$gutter / 2;
+
+        @media only screen and (min-width: 1000px) {
+          width: 50%;
+          color: black;
+          font-weight: bold;
+          font-size: 2rem;
+        }
+
+        @media only screen and (min-width: 1300px) {
+          width: 50%;
+          color: black;
+          font-weight: bold;
+          font-size: 2rem;
+        }
+      }
+
+      &__localisation {
+        width: 50%;
+        color: black;
+        padding-left: vars.$gutter;
+
+        @media only screen and (min-width: 1000px) {
+          width: 50%;
+          color: black;
+        }
+
+        @media only screen and (min-width: 1300px) {
+          width: 50%;
+          color: black;
+        }
+      }
+
+      &__gender {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: vars.$gutter * 2;
+
+        svg {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+
+      &__contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: vars.$gutter *2 vars.$gutter vars.$gutter;
+
+        &__name {
+          height: fit-content;
+          width: fit-content;
+          margin-top: vars.$gutter;
+          background-color: #FFC46E;
+          width: 15rem;
+          color: white;
+          border-radius: vars.$radius * 2;
+          padding: vars.$gutter / 1.5 vars.$gutter / 2;
+          border: none;
+          transition: 0.2s;
+          margin: vars.$gutter;
+          text-align: center;
+
+          @media only screen and (min-width: 1000px) {
+            height: fit-content;
+            width: fit-content;
+            margin-top: vars.$gutter;
+            background-color: #FFC46E;
+            width: 15rem;
+            color: white;
+            border-radius: vars.$radius * 2;
+            padding: vars.$gutter / 1.5 vars.$gutter / 2;
+            border: none;
+            transition: 0.2s;
+            margin: 0 vars.$gutter;
+            text-align: center;
+          }
+
+          @media only screen and (min-width: 1300px) {
+            height: fit-content;
+            width: fit-content;
+            margin-top: vars.$gutter;
+            background-color: #FFC46E;
+            width: 15rem;
+            color: white;
+            border-radius: vars.$radius * 2;
+            padding: vars.$gutter / 1.5 vars.$gutter / 2;
+            border: none;
+            transition: 0.2s;
+            margin: 0 vars.$gutter;
+            text-align: center;
+          }
+
+          &:hover {
+            background-color: #33200D;
+            cursor: pointer;
+          }
+        }
+
+        &__email {
+          &:hover {
+            color: white;
+            cursor: pointer;
+          }
+        }
+
+        &__icon {
+          margin: auto 0;
+
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+      &__editAndSuppressSection {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__bio {
+        color: black;
+        width: 90%;
+        padding: vars.$gutter / 2 0 0 0;
+        margin: vars.$gutter / 2;
+
+        &__span {
+          font-weight: bold;
+        }
+
+        &__edit {
+          display: flex;
+          flex-wrap: wrap;
+          margin: vars.$gutter /2 0;
+          padding: vars.$gutter / 2 vars.$gutter / 2 0;
+
+          &__label {
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            margin-top: vars.$gutter;
+          }
+
+          &__input::placeholder {
+            font-style: italic;
+          }
+
+          &__input {
+            background-color: white;
+            border: #FFC46E 1px solid;
+            border-radius: vars.$radius / 2;
+            width: 100%;
+            padding: 0.5rem 0.5rem;
+            margin-top: vars.$gutter / 2;
+          }
+
+          &__select {
+            background-color: white;
+            border: #FFC46E 1px solid;
+            border-radius: vars.$radius / 2;
+            width: 100%;
+            align-items: center;
+            padding: 0.5rem 0.5rem;
+            margin-top: vars.$gutter /2;
+          }
+
+          &__option {
+            background-color: white;
+            border: #FFC46E 1px solid;
+            border-radius: vars.$radius / 2;
+          }
+
+          &__textarea {
+            background-color: white;
+            border: #FFC46E 1px solid;
+            border-radius: vars.$radius / 2;
+            width: 100%;
+            padding: 0.5rem 0.5rem;
+            margin-top: vars.$gutter /2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.help {
+  color: #33200D;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: vars.$gutter * 4 vars.$gutter vars.$gutter * 3;
+
+  &__title {
+    border-bottom: 4px solid #ffc46e;
+    width: 90%;
+    text-align: center;
+    padding-bottom: vars.$gutter / 2;
+  }
+}
+
+.edit {
+
+  &__span {
+    margin-right: vars.$gutter / 2;
+  }
+
+  &__input {
+    background-color: white;
+    border: #FFC46E 1px solid;
+    border-radius: vars.$radius / 2;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin-top: vars.$gutter / 2;
+    background-color: rgb(255, 250, 246);
+
+    &__name {
+      width: 50%;
+    }
+
+    &__age {
+      width: 15%;
+      margin-right: vars.$gutter;
+    }
+
+    &__treatments {
+      width: 35%;
+    }
+  }
+
+  &__input::placeholder {
+    font-style: italic;
+  }
+
+  &__select {
+    background-color: white;
+    border: #FFC46E 1px solid;
+    border-radius: vars.$radius / 2;
+    width: 100%;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    margin-top: vars.$gutter /2;
+    background-color: rgb(255, 250, 246);
+
+    &__gender {
+      margin-right: vars.$gutter / 2;
+
+      &__select {
+        height: 3.5rem;
+      }
+    }
+
+    &__age,
+    &__size,
+    &__careType {
+      width: 35%;
+    }
+  }
+
+  &__option {
+    background-color: white;
+    border: #FFC46E 1px solid;
+    border-radius: vars.$radius / 2;
+  }
+
+  &__textarea {
+    background-color: white;
+    border: #FFC46E 1px solid;
+    border-radius: vars.$radius / 2;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin-top: vars.$gutter /2;
+    background-color: rgb(255, 250, 246);
+  }
+
+}
+
+.profil__btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: vars.$primary-box-shadow;
+  width: 7rem;
+  color: black;
+  border-radius: vars.$radius * 2;
+  padding: vars.$gutter;
+  border: none;
+  transition: 0.2s;
+  text-align: center;
+  margin: vars.$gutter / 2;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.884);
+  }
+
+  &--edit {
+    background-color: rgb(255, 196, 110);
+
+    &:hover {
+      color: white;
+      background-color: #33200D;
+    }
+  }
+
+  &--delete {
+    background-color: rgb(255, 174, 174);
+
+    &:hover {
+      color: white;
+      background-color: rgb(255, 47, 47);
+    }
+  }
+
+  &--suppress {
+    background-color: rgb(255, 106, 106);
+
+    &:hover {
+      color: white;
+      background-color: rgb(167, 37, 37);
+    }
+  }
+
+  &--keep {
+    background-color: rgb(80, 204, 80);
+
+    &:hover {
+      color: white;
+      background-color: rgb(68, 104, 68);
+    }
+  }
+
+  &--cancel {
+    background-color: rgb(255, 106, 106);
+
+    &:hover {
+      color: white;
+      background-color: rgb(167, 37, 37);
+    }
+  }
+
+  &--save {
+    background-color: rgb(80, 204, 80);
+
+    &:hover {
+      color: white;
+      background-color: rgb(68, 104, 68);
+    }
+  }
+}

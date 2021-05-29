@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+
+.navBar {
+
+      margin-top: vars.$gutter;
+
+      display: flex;
+
+      background-color: white;
+
+      &__button{
+        width: 100%;
+          padding: vars.$gutter / 1.5;
+          padding-top: 0em;
+          font-size: 1.3rem;
+          border-bottom: solid 2px #FFC46E;
+          text-align: center;
+
+          color: #33200D;
+
+
+          &--active{
+            color: #fdaf38;  
+            border-bottom: solid 5px #fdaf38;
+            font-weight: bold;
+            
+                      }
+
+      }
+}

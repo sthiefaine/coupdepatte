@@ -1,0 +1,31 @@
+@use 'src/styles/vars';
+
+
+.footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #FFC46E;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  &__element {
+    padding:10px;
+  }
+}
+
+.text {
+  color: white;
+  transition: 0.2s;
+  
+  &:hover {
+    color: #33200D;
+   }
+}

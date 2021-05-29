@@ -1,0 +1,167 @@
+@use 'src/styles/vars';
+
+
+.profil {
+
+  margin: 3rem auto 0;
+  box-shadow: vars.$primary-box-shadow;
+
+  &__section__informations__bio{
+    margin: .5rem .5rem .5rem 0;
+  }
+
+  &__section__informations__contact{
+    margin: vars.$gutter * 2 0;
+    width: 100%;
+
+    &__icon{
+      margin: vars.$gutter;
+
+      @media only screen and (min-width: 1000px) {
+        margin: auto 0;
+      }
+    
+      @media only screen and (min-width: 1300px) {
+        margin: auto 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    margin: 3rem auto 0;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (min-width: 1300px) {
+    margin: 3rem auto 0;
+    justify-content: space-evenly;
+  }
+
+}
+
+.section__info{
+  width: 90%;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 1000px) {
+    margin-left: vars.$gutter;
+    width: 45%;
+  }
+
+  @media only screen and (min-width: 1300px) {
+    margin-left: vars.$gutter;
+    width: 45%;
+  }
+
+  &__title{
+    margin-top: 2.5rem;
+    padding-bottom: vars.$gutter / 2;
+    font-weight: bold;
+    border-bottom: 4px solid #ffc46e;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+
+    @media only screen and (min-width: 750px) {
+      text-align: center;
+      // width: 80%;
+      // margin-top: 2.5rem auto 0;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      text-align: left;
+      width: fit-content;
+    }
+  
+    @media only screen and (min-width: 1300px) {
+      text-align: left;
+      width: fit-content;
+    }
+
+    &__svg{
+      margin-right: vars.$gutter / 5;
+    }
+  }
+}
+
+.users{
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.profil__section__informations__bio__edit__input, .profil__section__informations__bio__edit__textarea {
+  background-color: rgb(255, 250, 246);
+}
+
+
+.profil__btn{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: vars.$primary-box-shadow;
+  width: 7rem;
+  color: black;
+  border-radius: vars.$radius * 2;
+  padding: vars.$gutter;
+  border: none;
+  transition: 0.2s;
+  text-align: center;
+  margin: vars.$gutter / 2;
+
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.884);
+  }
+
+  &--edit{
+    background-color: rgb(255, 196, 110);
+
+    &:hover{
+      color: white;
+      background-color: #33200D;
+    }
+  }
+
+  &--delete{
+    background-color: rgb(255, 174, 174);
+
+    &:hover{
+      color: white;
+      background-color: rgb(255, 47, 47);
+    }
+  }
+
+  &--suppress{
+    background-color: rgb(255, 106, 106);
+
+    &:hover{
+      color: white;
+      background-color: rgb(167, 37, 37);
+    }
+  }
+
+  &--keep{
+    background-color: rgb(80, 204, 80);
+
+    &:hover{
+      color: white;
+      background-color: rgb(68, 104, 68);
+    }
+  }
+
+  &--cancel{
+    background-color: rgb(255, 106, 106);
+
+    &:hover{
+      color: white;
+      background-color: rgb(167, 37, 37);
+    }
+  }
+
+  &--save{
+    background-color: rgb(80, 204, 80);
+
+    &:hover{
+      color: white;
+      background-color: rgb(68, 104, 68);
+    }
+  }
+}

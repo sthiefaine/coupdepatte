@@ -1,0 +1,47 @@
+@use 'src/styles/vars';
+
+
+.sectionTop {
+  margin: 0 auto;
+  width: 100%;
+
+  &__presentation {
+
+
+    padding: vars.$gutter * 2;
+
+    background-image: url('/assets/chat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    max-width: 100%;
+    max-height: 100%;
+
+    &__text {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #33200D;
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+
+    &__button {
+      background-color: #FFC46E;
+      color: white;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      border: solid 1px#FFC46E;
+      font-weight: bold;
+      opacity: 0.8;
+      text-align: center;
+      padding: 0.4rem;
+      margin-top: vars.$gutter;
+      transition: 0.2s;
+
+      &:hover {
+        color: #33200D;
+      }
+    }
+  }
+}

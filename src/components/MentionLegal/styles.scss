@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+
+.MentionLegal {
+  min-width: 350px;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF4E9;
+  box-shadow: vars.$primary-box-shadow;
+  /* height: 90vh; */
+
+
+  &__subTitle1 {
+    margin: 2rem 7rem 2rem 7rem;
+  padding: 0.2rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #33200D;
+  border-bottom: solid 4px #FFC46E;
+    
+  
+  }
+
+  &__subTitle2 {
+    font-size: 1.1rem;
+    color: #33200D;
+    font-weight: bold;
+    
+  }
+  
+  &__block{
+    margin: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  
+
+    &__text{
+      max-height: 27em;
+      min-height: 3em;
+      width: 40em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      color: #33200D;
+      
+      font-size: 1rem ;
+      
+    }
+
+  }
+  
+}
+
+

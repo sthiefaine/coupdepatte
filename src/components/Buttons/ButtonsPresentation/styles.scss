@@ -1,0 +1,33 @@
+@use 'src/styles/vars';
+
+.buttonPresentation__primary {
+    display: block;
+    margin: vars.$gutter auto;
+    padding: vars.$gutter / 2 vars.$gutter * 2; 
+    font-size: vars.$gutter;
+    width: 100%;
+    text-align: center;
+    background: vars.$primary-color;
+    background: -webkit-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+    background: -moz-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+    background: -ms-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+    background: -o-linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+    background: linear-gradient(176deg, vars.$primary-color 0%, vars.$primary-color-dark 100%);
+    border-radius: vars.$radius / 2;
+    box-shadow: vars.$primary-box-shadow;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: 0.2s;
+    color: white;
+
+    &:hover{
+      color: black;
+      background: linear-gradient( vars.$primary-color-light, vars.$primary-color-dark);
+    }
+
+    &:active{
+      color: black;
+      background: linear-gradient( vars.$primary-color-light-2, vars.$primary-color-dark-lighten);
+      box-shadow: 1px 1px 5px grey inset;        
+  }
+}

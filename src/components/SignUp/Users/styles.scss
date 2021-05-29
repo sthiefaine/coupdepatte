@@ -1,0 +1,205 @@
+@use 'src/styles/vars';
+
+.field {
+
+  margin: .3em;
+  position: relative;
+}
+
+.field--has-content .field-label {
+  display: block;
+}
+
+.field-label {
+  display: none;
+  position: absolute;
+  top: .2rem;
+  left: .7rem;
+  font-weight: 700;
+  color: black;
+  font-size: .7em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  animation: labelSlideUpAndShow .3s;
+}
+
+@keyframes labelSlideUpAndShow {
+  0% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.signup {
+
+  width: 100%;
+  padding: 1em;
+  margin: vars.$gutter * 2 auto;
+  box-shadow: vars.$primary-box-shadow;
+  border-radius: vars.$radius / 2;
+  background: #FFF4E9;
+  color: #33200D;
+
+
+
+  &__title {
+
+
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #33200D;
+    border-bottom: solid 4px #FFC46E;
+  }
+
+  &__form {
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    &__password {
+      position: relative;
+
+      &--display {
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+        cursor: pointer;
+      }
+    }
+
+    &__departement {
+      padding: vars.$gutter;
+      margin: vars.$gutter;
+      border: vars.$primary-color 1px solid;
+      box-shadow: vars.$primary-box-shadow;
+      border-radius: vars.$radius / 2;
+    }
+
+    &__label {
+      display: none;
+      position: absolute;
+      top: .2rem;
+      left: .7rem;
+      font-weight: 700;
+      color: #999;
+      font-size: .7em;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      animation: labelSlideUpAndShow .2s;
+    }
+
+    @keyframes labelSlideUpAndShow {
+      0% {
+        transform: translateY(1em);
+        opacity: 0;
+      }
+
+      70% {
+        transform: translateY(0.5em);
+        opacity: 0.2;
+      }
+
+      100% {
+        transform: translateY(0em);
+        opacity: 1;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      padding: vars.$gutter;
+      margin-top: vars.$gutter;
+      border: vars.$primary-color 1px solid;
+      box-shadow: vars.$primary-box-shadow;
+      border-radius: vars.$radius / 2;
+    }
+
+    &__input::placeholder {
+      font-style: italic;
+    }
+
+    &__button {
+
+      display: block;
+
+    }
+
+    &__button {
+
+      color: white;
+      display: block;
+      margin: vars.$gutter auto;
+      padding: vars.$gutter / 2;
+      font-size: vars.$gutter;
+      width: 50%;
+      text-align: center;
+
+      border-radius: vars.$radius / 2;
+
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+      border: none;
+
+      &--desactive {
+
+        background: red;
+        box-shadow: vars.$primary-box-shadow;
+
+      }
+
+      &--active {
+
+        background: green;
+
+        &:hover {
+          color: black;
+        }
+
+
+      }
+    }
+  }
+}
+
+.text--errors {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.2rem;
+  padding-left: vars.$gutter;
+  width: 75%;
+}
+
+
+
+.signup__box-departement {
+  margin-top: 1rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__title {
+    padding-left: vars.$gutter;
+    align-items: center;
+
+  }
+}
+
+
+.surligne-red {
+  border: 2px solid red !important;
+}
+
+.surligne-green {
+  border: 2px solid green !important;
+}

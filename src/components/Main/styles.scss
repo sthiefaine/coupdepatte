@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.main {
+
+  background-color: white;
+  font-family: 'Calibri';
+  /* max-width:  1024px; */
+
+  margin: vars.$gutter * 3 10vw 0 10vw;
+
+  @media only screen and (max-width: 650px) {
+    margin: vars.$gutter * 3 0 0 0;
+  }
+}

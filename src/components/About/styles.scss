@@ -1,0 +1,99 @@
+@use 'src/styles/vars';
+
+.fiche{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  
+  transform-style: preserve-3d;
+  padding: 2em;
+  margin: 1.5em;
+}
+.fiche .face{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 1.5s ease-in-out;
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: vars.$primary-box-shadow;
+}
+
+.about {
+  min-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  background: #FFF4E9;
+  padding-bottom: 2em;
+  box-shadow: vars.$primary-box-shadow;
+  
+
+      &__title{
+
+        margin: 2rem 7rem 2rem 7rem;
+        padding: 0.2rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #33200D;
+        border-bottom: solid 4px #FFC46E;
+
+      }
+
+      &__text {
+      text-align: center;
+      color: #33200D;
+      
+      font-size: 1.1em ;
+      }
+
+      &__fiches {
+        
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF4E9;
+        flex-wrap: wrap;
+      }
+     
+      /******* SECTIONS QUI SE RETOURNENT *******/ 
+
+
+.fiche:hover .face.front{
+  transform: perspective(500px) rotateY(180deg);
+}
+.fiche .face.back{
+  background-color: white;
+  color: black;
+  transform: perspective(500px) rotateY(180deg);
+}
+.fiche:hover .face.back{
+  transform: perspective(500px) rotateY(360deg);
+}
+.fiche .face h2{
+  font-size: 1.5em;
+  color: #FFC46E;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  transform: perspective(500px) translateZ(50px);
+}
+/******* FIN SECTIONS QUI SE RETOURNENT *******/ 
+
+.img {
+  width: 100%;
+} 
+}
+      
+        
+      
+
+      
+
+    

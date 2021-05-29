@@ -1,0 +1,131 @@
+@use 'src/styles/vars';
+
+
+.miniCardPage {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: white;
+  width: 19rem;
+
+  margin: vars.$gutter vars.$gutter / 2;
+  box-shadow: vars.$primary-box-shadow;
+  border-radius: (vars.$radius * 2) (vars.$radius * 2);
+  // margin: vars.$gutter / 2 vars.$gutter / 6;
+
+
+  @media only screen and (min-width: 500px) {
+    margin: vars.$gutter vars.$gutter / 2;
+  }
+
+  @media only screen and (min-width: 750px) {
+    margin: vars.$gutter vars.$gutter / 2;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    margin: vars.$gutter vars.$gutter / 2;
+  }
+
+  @media only screen and (min-width: 1300px) {
+    margin: vars.$gutter vars.$gutter / 2;
+  }
+
+
+  &__left {
+
+    min-width: 50%;
+    max-width: 50%;
+    background-color: white;
+    border-radius: (vars.$radius * 2);
+
+    &__picture {
+
+      display: block;
+      width: 100%;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: (vars.$radius * 2);
+      max-height: 10rem;
+      min-height: 10rem;
+    }
+
+  }
+
+  &__right {
+    min-width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: (vars.$radius / 2) (vars.$radius / 2);
+
+    &__info {
+      width: 100%;
+
+      &__access {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+
+
+
+      }
+
+      &__name {
+        display: flex;
+        justify-content: space-between;
+        margin-left: vars.$gutter;
+        margin-bottom: vars.$gutter / 2;
+        margin-right: vars.$gutter;
+        font-weight: bold;
+      }
+
+      &__divZipCode {
+        font-weight: normal;
+      }
+
+      &__zipCode {
+        align-self: flex-start;
+        margin-left: vars.$gutter;
+      }
+    }
+
+    &__divBtn {
+
+      width: 100%;
+      text-align: center;
+
+      &__btn {
+        background-color: #FFC46E;
+        width: 80%;
+        color: white;
+        border-radius: vars.$radius * 2;
+        padding: vars.$gutter / 5 vars.$gutter;
+        border: none;
+        transition: 0.2s;
+
+
+        &:hover {
+          background-color: #33200D;
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (min-width: 500px) {}
+
+  @media only screen and (min-width: 750px) {}
+
+  @media only screen and (min-width: 1000px) {}
+
+  @media only screen and (min-width: 1300px) {}
+}
+
+.card__top__picture {
+  height: 10rem;
+}

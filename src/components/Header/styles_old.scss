@@ -1,0 +1,48 @@
+@use 'src/styles/vars';
+
+.header {
+
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  top: 0;
+
+  width: 100%;
+
+  background-color: vars.$primary-color;
+
+  padding: 0rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: vars.$primary-box-shadow;
+
+  //margin-bottom: 10rem;
+
+  &__logo {
+    margin: vars.$gutter;
+    display: block;
+    width: vars.$gutter * 2;
+    filter: brightness(0) invert(1);
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  &__menu {
+
+    margin: vars.$gutter;
+
+    background-color: vars.$primary-color;
+    
+    border-radius: 10px;
+    border: none;
+
+  }
+}
+
